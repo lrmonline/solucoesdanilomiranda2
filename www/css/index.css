@@ -1,0 +1,107 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #212121;
+  font-size: 14px;
+  line-height: 1.5;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+a,
+input,
+textarea,
+select {
+  outline: 0;
+}
+a {
+  text-decoration: none;
+  color: #2196f3;
+}
+p {
+  margin: 1em 0;
+}
+
+/*start header*/
+.header{
+    width: 100%;
+    background-color: #0072bf;
+    height: 50px
+}
+
+.header .title-header{
+    color: #fff;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/*start slider*/
+.capa{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+/*paginas*/
+.page-content {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/*start button menu*/
+.content-block {
+  margin: 32px 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.button-custom{
+    width: 48%;
+    margin-left: 1%;
+    margin-bottom: 5px;
+}
+
+.img-btn{
+    width: 100%;
+    height: auto;
+}
+
+
+/*Toolbar*/
+.toolbar{
+    width: 100%;
+    background-color: #0072bf;
+    height: 50px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    z-index: 500;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.toolbar img{
+    margin-top: -5px;
+    width:30px;
+    height: auto;
+}
+
+/*página modal*/

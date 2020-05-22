@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>Soluções Danilo Miranda</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <link href="http://lrmonline.com.br/site/css/animate.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!--Topo Page-->
+    <div class="topo">
+        <p>Plano Antecipado</p>
+    </div>
+    <!--Geral-->
+
+        <div class="w3-container">
+          <div class="w3-bar">
+            <button class="w3-bar-item w3-button w3-border tablink w3-blue" onclick="openCity(event,'London')">Com Repasse</button>
+            <button class="w3-bar-item w3-button w3-border tablink" onclick="openCity(event,'Paris')">Sem Repasse</button>
+          </div>
+          <br>
+
+          <div id="London" class="w3-container city">
+            <form name="action">
+                <div class="form-group">
+                    <label>Valor que você quer receber: </label>
+                    <input type="number" class="form-control" id="n1" onKeydown="Formata(this,20,event,2)" name="valor" placeholder="129.99">
+                </div>
+                <input type="button" style="width: 100%" onclick="antecipadocomrepasse()"   class="btn btn-primary"  value="Prosseguir">
+            </form>
+
+            <br><br>
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <td><strong>Descrição</strong></td>
+                        <td>Valor Total</td>
+                        <td>Valor Total</td>
+                        <td>Taxa</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="display: none">
+                        <td>Á Vista</td>
+                        <td><div id="avista1"></div></td>
+                        <td><div id="avista2"></div></td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Débito</td>
+                        <td><div id="debito1.1" class="debito1"></div></td>
+                        <td><div id="debito1.2"></div></td>
+                        <td>1,9%</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Descrição</strong></td>
+                        <td>Valor Total</td>
+                        <td>Valor da Parcela</td>
+                        <td>Taxa</td>
+                    </tr>
+                    <tr>
+                        <td>1X</td>
+                        <td><div id="x11"></div></td>
+                        <td><div id="x12"></div></td>
+                        <td>4,6%</td>
+                    </tr>
+                    <tr>
+                        <td>2X</td>
+                        <td><div id="2x-1"></div></td>
+                        <td><div id="2x-2"></div></td>
+                        <td>6,1%</td>
+                    </tr>
+                    <tr>
+                        <td>3X</td>
+                        <td><div id="3x-1"></div></td>
+                        <td><div id="3x-2"></div></td>
+                        <td>7,6%</td>
+                    </tr>
+                    <tr>
+                        <td>4X</td>
+                        <td><div id="4x-1"></div></td>
+                        <td><div id="4x-2"></div></td>
+                        <td>9,1%</td>
+                    </tr>
+                    <tr>
+                        <td>5X</td>
+                        <td><div id="5x-1"></div></td>
+                        <td><div id="5x-2"></div></td>
+                        <td>10,6%</td>
+                    </tr>
+                    <tr>
+                        <td>6X</td>
+                        <td><div id="6x-1"></div></td>
+                        <td><div id="6x-2"></div></td>
+                        <td>12,1%</td>
+                    </tr>
+                    <tr>
+                        <td>7X</td>
+                        <td><div id="7x-1"></div></td>
+                        <td><div id="7x-2"></div></td>
+                        <td>13,6%</td>
+
+                    </tr>
+                    <tr>
+                        <td>8X</td>
+                        <td><div id="8x-1"></div></td>
+                        <td><div id="8x-2"></div></td>
+                        <td>15,1%</td>
+                    </tr>
+                    <tr>
+                        <td>9X</td>
+                        <td><div id="9x-1"></div></td>
+                        <td><div id="9x-2"></div></td>
+                        <td>16,6%</td>
+                    </tr>
+                    <tr>
+                        <td>10X</td>
+                        <td><div id="10x-1"></div></td>
+                        <td><div id="10x-2"></div></td>
+                        <td>18,1%</td>
+                    </tr>
+                    <tr>
+                        <td>11X</td>
+                        <td><div id="11x-1"></div></td>
+                        <td><div id="11x-2"></div></td>
+                        <td>19,6%</td>
+                    </tr>
+                    <tr>
+                        <td>12X</td>
+                        <td><div id="12x-1"></div></td>
+                        <td><div id="12x-2"></div></td>
+                        <td>21,1%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a class="btn btn-primary" href="#" onclick="this.href='https://api.whatsapp.com/send?text=https://solucoesdanilomiranda.com.br/page/resultadoant.php?valor='+document.getElementById('n1').value" >Compartilhar no Whatsapp</a>
+
+          </div>
+
+          <div id="Paris" class="w3-container city" style="display:none">
+            <form name="action">
+                <div class="form-group">
+                    <label>Valor que você irá vender: </label>
+                    <input type="number" class="form-control" id="n2" onKeydown="Formata(this,20,event,2)" name="valor" placeholder="129.99">
+                </div>
+                <input type="button" style="width: 100%" class="btn btn-primary" onclick="antecipadosemrepasse()" value="Prosseguir">
+            </form>
+
+            <br><br>
+            <table class="table" >
+                <tbody>
+                    <tr style="display: none">
+                        <td>Débito</td>
+                        <td><div id="Iavista1"></div></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Descrição</strong></td>
+                        <td>Valor</td>
+                        <td>Taxa</td>
+                    </tr>
+                    <tr>
+                        <td>Débito</td>
+                        <td><div id="debito-I"></div></td>
+                        <td>1,9%</td>
+                        
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Descrição</strong></td>
+                        <td>Valor a Receber</td>
+                        <td>Taxa</td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>1X</td>
+                        <td><div id="12x"></div></td>
+                        <td>4,6%</td>
+                    </tr>
+                    <tr>
+                        <td>2X</td>
+                        <td><div id="22x"></div></td>
+                        <td>6,1%</td>
+                    </tr>
+                    <tr>
+                        <td>3X</td>
+                        <td><div id="32x"></div></td>
+                        <td>7,6%</td>
+                    </tr>
+                    <tr>
+                        <td>4X</td>
+                        <td><div id="42x"></div></td>
+                        <td>9,1%</td>
+                    </tr>
+                    <tr>
+                        <td>5X</td>
+                        <td><div id="52x"></div></td>
+                        <td>10,6%</td>
+                    </tr>
+                    <tr>
+                        <td>6X</td>
+                        <td><div id="62x"></div></td>
+                        <td>12,1%</td>
+                    </tr>
+                    <tr>
+                        <td>7X</td>
+                        <td><div id="72x"></div></td>
+                        <td>13,6%</td>
+
+                    </tr>
+                    <tr>
+                        <td>8X</td>
+                        <td><div id="82x"></div></td>
+                        <td>15,1%</td>
+                    </tr>
+                    <tr>
+                        <td>9X</td>
+                        <td><div id="92x"></div></td>
+                        <td>16,6%</td>
+                    </tr>
+                    <tr>
+                        <td>10X</td>
+                        <td><div id="102x"></div></td>
+                        <td>18,1%</td>
+                    </tr>
+                    <tr>
+                        <td>11X</td>
+                        <td><div id="112x"></div></td>
+                        <td>19,6%</td>
+                    </tr>
+                    <tr>
+                        <td>12X</td>
+                        <td><div id="122x"></div></td>
+                        <td>21,1%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href="#" onclick="this.href='https://api.whatsapp.com/send?text=https://solucoesdanilomiranda.com.br/page/resultadoant2.php?valor='+document.getElementById('n2').value" >Compartilhar no Whatsapp</a>
+          </div>
+
+
+
+       
+
+
+    <script>
+        function openCity(evt, cityName) {
+          var i, x, tablinks;
+          x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-blue", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " w3-blue";
+        }
+        </script>
+<script src="../js/antecipado.js"></script> 
+<script src="../bootstrap/bootstrap.min.js"></script> 
+<script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+
+</body>
+</html>
