@@ -1,7 +1,7 @@
 
   function antecipadocomrepasse() {
 
-  var n1 = parseInt(document.getElementById('n1').value, 10);
+  var n1 = document.getElementById('n1').value;
   var formato = { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }
   //á vista
   document.getElementById('avista1').innerHTML = n1.toLocaleString('pt-BR', formato);
