@@ -1,6 +1,6 @@
 function economicocomrepasse() {
 
-  var n1 = parseInt(document.getElementById('n1').value, 10);
+  var n1 = document.getElementById('n1').value;
   var formato = { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }
   //á vista
   document.getElementById('avista1').innerHTML = n1.toLocaleString('pt-BR', formato);
@@ -92,7 +92,7 @@ function economicocomrepasse() {
 
 function economicosemrepasse() {
 
-  var n2 = parseInt(document.getElementById('n2').value, 10);
+  var n2 = document.getElementById('n2').value;
   var formato = { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }
   //á vista
   document.getElementById('Iavista1').innerHTML = n2.toLocaleString('pt-BR', formato);

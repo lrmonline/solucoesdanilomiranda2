@@ -1,7 +1,7 @@
 
   function linkcomrepasse() {
 
-  var n1 = parseInt(document.getElementById('n1').value, 10);
+  var n1 = document.getElementById('n1').value;
   var formato = { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }
   
 
@@ -86,7 +86,7 @@
 
 function semrepasse() {
 
-  var n2 = parseInt(document.getElementById('n2').value, 10);
+  var n2 = document.getElementById('n2').value;
   var formato = { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }
 
   //1x
